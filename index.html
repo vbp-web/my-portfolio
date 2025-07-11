@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vansh Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<body>
+
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>
+    <h1 class="logo">👨‍💻 Vansh</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+ <section id="home" class="section home-section">
+  <div class="hero-container fade-in">
+    <div class="hero-text">
+      <h2>Hello, I'm <span>Vansh</span></h2>
+      <p>Web Developer • Designer • Creator • Ai Student</p>
+      <button onclick="scrollToSection('about')">Discover More</button>
+    </div>
+    <div class="hero-animation">
+      <lottie-player 
+        src="https://assets2.lottiefiles.com/packages/lf20_kyu7xb1v.json"  
+        background="transparent"
+        speed="1"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about" class="section about-section">
+    <h2 class="section-title">👋 About Me</h2>
+    <div class="about-container fade-in">
+      <div class="profile-box">
+        <div class="profile-card">
+          <div class="profile-front">
+            <img src="vansh p.jpeg" alt="My Profile" />
+          </div>
+          <div class="profile-back">
+            <p>Hi! I'm Vansh 👋</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-card">
+        <p>
+          I'm a <span class="highlight">passionate web developer</span> who creates dynamic, user-focused websites using HTML, CSS, JS, and animations.
+        </p>
+        <a class="resume-btn" href="Vansh_Resume.pdf" download>📄 Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section project-section">
+    <h2 class="section-title">🚀 Projects</h2>
+    <div class="project-list fade-in">
+      <div class="project-card">E-commerce Website</div>
+      <div class="project-card">Portfolio Website</div>
+      <div class="project-card">Weather App</div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section skills-section">
+    <h2 class="section-title">🎯 My Skills</h2>
+    <div class="skills-container fade-in">
+      <div class="skill"><span>HTML</span><div class="skill-bar"><div class="bar html-bar"></div></div></div>
+      <div class="skill"><span>CSS</span><div class="skill-bar"><div class="bar css-bar"></div></div></div>
+      <div class="skill"><span>JavaScript</span><div class="skill-bar"><div class="bar js-bar"></div></div></div>
+      <div class="skill"><span>UI/UX</span><div class="skill-bar"><div class="bar ui-bar"></div></div></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <h2 class="section-title">📬 Contact Me</h2>
+    <div class="contact-box fade-in">
+      <p>Email:prajapativansh512@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/vansh</p>
+      <p>GitHub: github.com/vanshdev</p>
+      <p> Mobile no: 8401286822</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vansh Prajapati • All Rights Reserved</p>
+  </footer>
+
+  
+
+<!-- Particle JS CDN -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- Your Script -->
+<script src="script.js"></script>
+</body>
+</html>

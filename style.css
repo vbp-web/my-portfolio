@@ -1,0 +1,358 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.5rem;
+  color: #00ffc8;
+}
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #00ffc8;
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00ffc8;
+}
+
+/* Hero Section */
+.home-section {
+  background: radial-gradient(circle, #1a1a1a, #0a0a0a);
+}
+
+/* Lottie Animation in Hero */
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 100px;
+}
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+}
+.hero-animation lottie-player {
+  width: 300px;
+  height: 300px;
+}
+.hero-text h2 {
+  font-size: 3rem;
+}
+.hero-text h2 span {
+  color: #00ffc8;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.hero-text button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #00ffc8;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-text button:hover {
+  background: #00c0ff;
+}
+
+/* About */
+.about-section {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-box {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+.profile-card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.profile-card:hover {
+  transform: rotateY(180deg);
+}
+.profile-front, .profile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
+}
+.profile-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-back {
+  background: #00ffc8;
+  color: #000;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.about-card {
+  max-width: 600px;
+  text-align: center;
+}
+.highlight {
+  color: #00ffc8;
+  font-weight: bold;
+}
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffc8;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.resume-btn:hover {
+  background: #fff;
+}
+
+/* Projects */
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.project-card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 10px 30px rgba(0, 255, 200, 0.1);
+  transition: transform 0.4s ease;
+}
+.project-card:hover {
+  transform: scale(1.1) rotateY(5deg);
+}
+
+/* Skills */
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+.skill {
+  margin-bottom: 20px;
+}
+.skill span {
+  font-weight: bold;
+  color: #00ffc8;
+}
+.skill-bar {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+  height: 20px;
+}
+.bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ffc8, #00c0ff);
+  border-radius: 10px;
+  transition: width 2s ease;
+}
+
+/* Contact */
+.contact-box {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 200, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #777;
+}
+
+/* Scroll Fade-In Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+
+/* Tablets (width up to 1024px) */
+@media (max-width: 1024px) {
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .project-list {
+    gap: 20px;
+  }
+  .project-card {
+    width: 45%;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile (width up to 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 10px;
+    font-size: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-animation lottie-player {
+    width: 220px;
+    height: 220px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .about-card,
+  .contact-box,
+  .skills-container {
+    width: 90%;
+    text-align: center;
+  }
+
+  .skills-container {
+    text-align: left;
+  }
+
+  .profile-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .resume-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Particle background full screen */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(#111, #000);
+}
